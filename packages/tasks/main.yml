@@ -30,4 +30,4 @@
 - name: Configure different gsettings.
   become: yes
   become_user: abowo
-  shell: ~/workansible/gsettings.sh
+  shell: ~/deploy/gsettings.sh
