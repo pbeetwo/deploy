@@ -1,0 +1,33 @@
+---
+- name: Equivalent to update current package manager.
+  apt:
+    update_cache: yes
+
+- name: Update all packages to the latest version.
+  apt:
+    upgrade: dist
+
+- name: Install all the needed packages.
+  apt: name={{item}} state=installed
+  with_items:
+    - iotop
+    - htop
+    - unity-tweak-tool
+    - curl
+    - numix-gtk-theme
+    - vim
+    - git
+    - python-pip
+    - unzip
+
+- name: Install AWS CLI.
+  shell: pip install awscli
+
+- name: Remove useless packages.
+  apt:
+    autoremove: yes
+
+- name: Configure different gsettings.
+  become: yes
+  become_user: abowo
+  shell: ~/workansible/gsettings.sh
