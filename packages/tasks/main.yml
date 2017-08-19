@@ -31,3 +31,9 @@
   become: yes
   become_user: abowo
   shell: ~/deploy/gsettings.sh
+
+- name: Install Atom Editor
+  shell: wget https://atom.io/download/deb
+
+- name: Install Atom editor
+  shell: dpkg -i deb
