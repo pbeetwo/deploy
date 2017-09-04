@@ -1,4 +1,5 @@
 #!/bin/bash
+
 # Install latest version of Ansible if not installed and execute playbook deploywork.yml
 
 if test -e /usr/bin/ansible ; then

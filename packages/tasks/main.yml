@@ -29,7 +29,7 @@
 
 - name: Configure different gsettings.
   become: yes
-  become_user: abowo
+  become_user: adaunis
   shell: ~/deploy/gsettings.sh
 
 - name: Install Atom Editor
