@@ -19,7 +19,6 @@
     - git
     - python-pip
     - unzip
-    - test
 
 - name: Install AWS CLI.
   shell: pip install awscli
